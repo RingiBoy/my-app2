@@ -1,5 +1,6 @@
 import React from 'react';
 import Cars from "./components/Cars/Cars";
+import CarForm from "./components/CarForm/CarForm";
 
 const App = () => {
 
@@ -7,7 +8,8 @@ const App = () => {
 
   return (
         <div>
-<Cars/>
+    <CarForm/>
+            <Cars/>
 
         </div>
     );

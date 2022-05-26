@@ -5,7 +5,7 @@ import {carActions} from "../../redux/slices/car.slice";
 
 const Cars = () => {
 
-  const {cars} =  useSelector(store =>store.cars)
+  const {cars, status} =  useSelector(store =>store.cars)
   const dispatch = useDispatch();
 
   useEffect(()=>{
@@ -14,6 +14,7 @@ const Cars = () => {
 
     return (
         <div>
+            {status&&<h1>{status}</h1>}
             {cars.map(car => <Car key={car.id} car={car}/>)}
         </div>
     );
